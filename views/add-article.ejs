@@ -1,0 +1,20 @@
+<%- include('./header.ejs') %> 
+
+<div class="container mt-5 pt-3">
+
+<div class="row">
+<div class="col-md-8 m-auto">
+    <form action="/addarticle" method="POST">
+          <input type="text" name="title" class="form-control" placeholder="Title" >
+          <textarea type="text" rows="6" name="description" class="form-control mt-3" placeholder="Description"></textarea>
+         <button type="submit" class="btn btn-info w-100 mt-3" >Add</button>
+    </form>
+</div>
+</div>
+
+
+</div>
+
+
+
+<%- include('./footer.ejs') %> 

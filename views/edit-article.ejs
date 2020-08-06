@@ -1,0 +1,21 @@
+<%- include('./header.ejs') %> 
+
+<div class="container mt-5 pt-3">
+
+<div class="row">
+<div class="col-md-8 m-auto">
+    <form action="/editarticleform/<%= result[0].id %> " method="POST">
+          <input type="text" name="title" class="form-control" placeholder="Title" value="<%= result[0].title  %>" >
+          <input type="text" style="height:100px;" name="description" class="form-control mt-3" placeholder="Description"
+          value="<%= result[0].description  %>"  >
+         <button type="submit" class="btn btn-info w-100 mt-3" >Update</button>
+    </form>
+</div>
+</div>
+
+
+</div>
+
+
+
+<%- include('./footer.ejs') %> 

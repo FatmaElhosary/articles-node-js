@@ -1,0 +1,23 @@
+<section class="my-5">
+    <div class="container">
+    <div class="row m-auto">
+        <div class="col-md-10">
+          <% var route="/dashboard/searcharticles"%> 
+            
+          <% if (!admin) {
+              route="/searcharticles";  
+              %>
+           
+          <% } %>   
+      
+           
+            <form class="my-2 " action = <%= route %> method="POST">
+                <input class="form-control mr-md-2 d-inline col-md-8"  name="title" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 col-md-2" type="submit">Search</button>
+              </form>
+        </div>
+    </div>
+</div>
+    
+</section>
+
