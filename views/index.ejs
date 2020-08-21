@@ -10,15 +10,16 @@
     <div class="col-md-4">
       <div class="card p-2  my-2 rounded" style="width: 18rem;">
         <div class="card-body">
+          <img src="<%= articles[index].imgURL %> " alt="card"  class="w-75">
           <h5 class="card-title"> <%= articles[index].title %>  </h5>
           <p class="card-text">
             <%= articles[index].description %> 
           </p>
-          <a href="/article/<%= articles[index].id %> " class="btn btn-info">Read More...</a>
+          <a href="/article/<%= articles[index]._id %> " class="btn btn-info">Read More...</a>
 <% if (admin) { %>
   <div class="py-2">
-    <a href="/editarticle/<%= articles[index].id %>" class="btn btn-info">Edit</a>
-    <a href="/deletearticle/<%= articles[index].id %>" class="btn btn-danger">Delete</a>
+    <a href="/editarticle/<%= articles[index]._id %>" class="btn btn-info">Edit</a>
+    <a href="/deletearticle/<%= articles[index]._id %>" class="btn btn-danger">Delete</a>
    </div>
 <% } %>
      

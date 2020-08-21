@@ -1,11 +1,13 @@
-const mysql=require('mysql2');
+const mongosse=require('mongoose')
 
 
-const query=mysql.connect({
-    host:'localhost',
-    database:'articles',
-    user:'root',
-    password:''
+const indexSchema=new mongosse.Schema({
+    title:String,
+    imgURL:String,
+    description:String
 });
 
-module.exports=query.promise();
+
+const DBModel=mongosse.model('article',indexSchema);
+
+module.exports=DBModel;

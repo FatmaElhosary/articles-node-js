@@ -4,10 +4,12 @@
 
 <div class="row">
 <div class="col-md-8 m-auto">
-    <form action="/editarticleform/<%= result[0].id %> " method="POST">
-          <input type="text" name="title" class="form-control" placeholder="Title" value="<%= result[0].title  %>" >
+    <form action="/editarticleform/<%= result._id %> " method="POST" enctype="multipart/form-data">
+        <img src="<%= result.imgURL %> "/>
+        <input type="file" name="cardimg" class="form-control my-4" accept="image/*" />
+          <input type="text" name="title" class="form-control" placeholder="Title" value="<%= result.title  %>" >
           <input type="text" style="height:100px;" name="description" class="form-control mt-3" placeholder="Description"
-          value="<%= result[0].description  %>"  >
+          value="<%= result.description  %>"  >
          <button type="submit" class="btn btn-info w-100 mt-3" >Update</button>
     </form>
 </div>
